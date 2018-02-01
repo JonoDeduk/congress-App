@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MouseoverCongressCardDirective } from '../mouseover-congress-card.directive';
-
+import { MakeCongressService } from '../make-congress.service';
 
 @Component({
   selector: 'app-congress-card',
@@ -8,10 +8,14 @@ import { MouseoverCongressCardDirective } from '../mouseover-congress-card.direc
   styleUrls: ['./congress-card.component.less']
 })
 export class CongressCardComponent implements OnInit {
+ @Input() congressMember: {  pic: string, name: string, info: string};
 
-  constructor() { }
+  constructor(private MakeCongressService: MakeCongressService) { }
 
   ngOnInit() {
+
+
+
   }
 
 }

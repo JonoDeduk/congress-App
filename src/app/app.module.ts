@@ -12,6 +12,7 @@ import { CongressCardComponent } from './congress-card/congress-card.component';
 import { ContentBoxComponent } from './content-box/content-box.component';
 import { FilterCardComponent } from './filter-card/filter-card.component';
 import { MouseoverCongressCardDirective } from './mouseover-congress-card.directive';
+import { MakeCongressService } from './make-congress.service';
 
 
 
@@ -33,7 +34,7 @@ import { MouseoverCongressCardDirective } from './mouseover-congress-card.direct
       FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MakeCongressService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

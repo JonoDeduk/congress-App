@@ -1,12 +1,9 @@
   <section class="flex-container">
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
-<app-congress-card appMouseoverCongressCard></app-congress-card>
+<app-congress-card
+*ngFor="let congressMember of congressMembers; let i = index"
+[congressMember] = "congressMember"
+appMouseoverCongressCard></app-congress-card>
+
 
 
 </section>

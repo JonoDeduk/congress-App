@@ -12,9 +12,7 @@ import {
   selector: '[appMouseoverCongressCard]'
 })
 export class MouseoverCongressCardDirective implements OnInit {
-  @Input() defaultColor: string = 'transparent'
-  @Input() highlightColor: string = 'blue'
-  @HostBinding('style.backgroundColor') backgroundColor: string = this.defaultColor;
+
 
 
 
