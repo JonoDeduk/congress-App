@@ -1,9 +1,21 @@
   <section class="flex-container">
-<app-congress-card
-*ngFor="let congressMember of congressMembers; let i = index"
-[congressMember] = "congressMember"
-appMouseoverCongressCard></app-congress-card>
+<div
+*ngFor = "let congressMember of congressMembers | slice:0:howmanyloaded; let i = index"
+appMouseoverCongressCard>
 
+<div class="flexItem">
+  <div class="imgWrapper">
+    <img
+     [src]= 'congressMember.pic'
+     onError="this.src='assets/placeholderPIC.png'">
+  </div>
+  <div class="repInfo">
+    <h3>{{congressMember.name}} {{congressMember.state}}</h3>
+    <h3>{{congressMember.title}}</h3>
+    <h3>{{congressMember.party}}</h3>
+  </div>
+</div>
 
-
+</div>
 </section>
+<button (click) = "loadmore()">Load more</button>

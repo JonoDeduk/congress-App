@@ -1,6 +1,36 @@
+@primaryFont: helvetica;
+@lineheightmultiplyer: 1.6;
+
+@h1FontSize: 20pt;
+@h1lineheight: @h1FontSize * @lineheightmultiplyer;
+
+@h3FontSize: 12pt;
+@h3lineheight: @h3FontSize * @lineheightmultiplyer;
+
+@lFontSize: 14pt;
+@lLineheight: @lFontSize * @lineheightmultiplyer;
+
+
 html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
 font-family: Palatino;
+}
+
+h1{
+  font-family: @primaryFont;
+  line-height: @h1lineheight;
+  font-size: @h1FontSize;
+}
+h3{
+  font-family: @primaryFont;
+  line-height: @h3lineheight;
+  font-size: @h3FontSize;
+}
+
+label{
+  font-family: @primaryFont;
+  line-height: @lLineheight;
+  font-size: @lFontSize;
 }
