@@ -2,13 +2,13 @@
   <div class="flex-item">
   <h1 class="filterLabel">Party</h1>
   <form name="myForm">
-      <input type="checkbox">
+      <input type="checkbox" (click) = "filterCheck('party', 'Democrat')">
       <label>Democrat
     </label><br/>
-      <input type="checkbox">
+      <input type="checkbox" (click) = "filterCheck('party', 'Republican')">
         <label>Republican
     </label><br/>
-      <input type="checkbox">
+      <input type="checkbox" (click) = "filterCheck('party', 'Independent')">
       <label>Independent
     </label><br/>
   </form>

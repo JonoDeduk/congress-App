@@ -28,9 +28,8 @@ constructor(private ApiCallService: ApiCallService) {}
    //the part that holds the data for each member of congress
    var congress = result.results[0].members;
    for (var i = 0; i < congress.length; i++) {
-     console.log(congress[i]);
        this.congressMembers.push(
-{         pic: 'https://theunitedstates.io/images/congress/450x550/'+ congress[i].id +'.jpg',
+{        pic: 'https://theunitedstates.io/images/congress/450x550/'+ congress[i].id +'.jpg',
          name: congress[i].first_name + " " + congress[i].last_name,
          title: congress[i].title,
          twitter: congress[i].twitter_account,
@@ -50,7 +49,7 @@ constructor(private ApiCallService: ApiCallService) {}
    }
 
  });
- console.log(this.data);
+
 }
 
 fullpartyname(letter){

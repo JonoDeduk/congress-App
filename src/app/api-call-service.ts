@@ -18,4 +18,6 @@ APICall(APIurl , headersToAppend ){
     }
       return this.http.get(APIurl,{headers:headers})
 }
+
+
 }

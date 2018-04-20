@@ -1,6 +1,7 @@
   <section class="flex-container">
+
 <div
-*ngFor = "let congressMember of congressMembers | slice:0:howmanyloaded; let i = index"
+*ngFor = "let congressMember of congressMembers| partyFilter:checkedParty |slice:0:howmanyloaded; let i = index"
 appMouseoverCongressCard>
 
 <div class="flexItem">

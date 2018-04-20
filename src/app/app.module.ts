@@ -10,10 +10,17 @@ import { CongressBoxComponent } from './congress-box/congress-box.component';
 
 
 
+
+
 import { MouseoverCongressCardDirective } from './mouseover-congress-card.directive';
+
+
 import { MakeCongressService } from './make-congress.service';
 import { ApiCallService } from './api-call-service';
+
 import { FooterComponent } from './footer/footer.component';
+import { PartyFilterPipe } from './party-filter.pipe';
+import { CheckboxFilterService } from './checkbox-filters.service';
 
 
 @NgModule({
@@ -24,8 +31,8 @@ import { FooterComponent } from './footer/footer.component';
     CongressBoxComponent,
 
     MouseoverCongressCardDirective,
-    FooterComponent
-
+    FooterComponent,
+    PartyFilterPipe,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +40,8 @@ import { FooterComponent } from './footer/footer.component';
     HttpModule
   ],
   providers: [MakeCongressService,
-              ApiCallService],
+              ApiCallService,
+              CheckboxFilterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
