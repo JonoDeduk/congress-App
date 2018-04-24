@@ -21,6 +21,7 @@ import { ApiCallService } from './api-call-service';
 import { FooterComponent } from './footer/footer.component';
 import { PartyFilterPipe } from './party-filter.pipe';
 import { CheckboxFilterService } from './checkbox-filters.service';
+import { ChamberFilterPipe } from './chamber-filter.pipe';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { CheckboxFilterService } from './checkbox-filters.service';
     MouseoverCongressCardDirective,
     FooterComponent,
     PartyFilterPipe,
+    ChamberFilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -1,32 +1,34 @@
 <div class = "flex-container">
   <div class="flex-item">
-  <h1 class="filterLabel">Party</h1>
-  <form name="myForm">
-      <input type="checkbox" (click) = "filterCheck('party', 'Democrat')">
-      <label>Democrat
-    </label><br/>
-      <input type="checkbox" (click) = "filterCheck('party', 'Republican')">
-        <label>Republican
-    </label><br/>
-      <input type="checkbox" (click) = "filterCheck('party', 'Independent')">
-      <label>Independent
-    </label><br/>
-  </form>
+  <h1 class="filterLabel" > Party </h1>
+    <div class="ToggleBox" (click) = "filterCheck('party', 'Democrat')" [ngClass]="{'ToggleBoxChecked': this.filters.party.Democrat}" appMouseoverCongressCard>
+          <h1 >Democrat</h1>
+    </div>
+    <br>
+    <div class="ToggleBox" (click) = "filterCheck('party', 'Republican')" [ngClass]="{'ToggleBoxChecked': this.filters.party.Republican}" appMouseoverCongressCard>
+          <h1 >Republican</h1>
+    </div>
+    <br>
+    <div class="ToggleBox" (click) = "filterCheck('party', 'Independent')" [ngClass]="{'ToggleBoxChecked': this.filters.party.Independent}" appMouseoverCongressCard>
+          <h1 >Independent</h1>
+    </div>
+<br>
+
   </div>
 
 
   <div class="flex-item">
+
+
   <h1 class="filterLabel">Chamber</h1>
-  <form name="myForm">
-      <input type="checkbox">
-      <label>House
-    </label><br/>
-      <input type="checkbox">
-        <label>Senate
-    </label><br/>
-
-
-  </form>
+  <div class="ToggleBox" (click) = "filterCheck('chamber', 'House')" [ngClass]="{'ToggleBoxChecked': this.filters.chamber.House}" appMouseoverCongressCard>
+        <h1 >House</h1>
+  </div>
+<br>
+<div class="ToggleBox" (click) = "filterCheck('chamber', 'Senate')" [ngClass]="{'ToggleBoxChecked': this.filters.chamber.Senate}" appMouseoverCongressCard>
+    <h1 >Senate</h1>
+</div>
+<br>
   </div>
 
 </div>

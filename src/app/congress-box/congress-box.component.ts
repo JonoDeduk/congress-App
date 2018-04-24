@@ -13,6 +13,7 @@ export class CongressBoxComponent implements OnInit {
 congressMembers: { pic: string, name: string, info: string}[] = [];
 howmanyloaded: number;
 checkedParty : {};
+checkedChamber : {};
 filters: {};
   constructor(private makeCongressService: MakeCongressService, private CheckboxFilterService: CheckboxFilterService) { }
 
@@ -25,9 +26,11 @@ filters: {};
     this.filters = this.CheckboxFilterService.filters;
     console.log(this.filters);
     this.checkedParty = this.filters['party'];
+    this.checkedChamber = this.filters['chamber'];
+    console.log(this.checkedChamber);
   }
   ngOnChanges(){
-    console.log(this.checkedParty);
+    console.log(this.checkedChamber);
   }
 
 

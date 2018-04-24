@@ -1,8 +1,7 @@
   <section class="flex-container">
 
 <div
-*ngFor = "let congressMember of congressMembers| partyFilter:checkedParty |slice:0:howmanyloaded; let i = index"
-appMouseoverCongressCard>
+*ngFor = "let congressMember of congressMembers| partyFilter:checkedParty| chamberFilter:checkedChamber |slice:0:howmanyloaded; let i = index">
 
 <div class="flexItem">
   <div class="imgWrapper">

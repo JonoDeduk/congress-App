@@ -4,7 +4,6 @@
 // key: eSWFmfOycw0k6OHWydfe3a1AcTKkF1UO2o3DgZig
 // api Documentation: https://projects.propublica.org/api-docs/congress-api/
 
-
 import { Injectable } from '@angular/core';
 import { Http, Headers,Response, Jsonp } from '@angular/http';
 import { Observable} from 'rxjs/Observable';
@@ -23,7 +22,9 @@ constructor(private ApiCallService: ApiCallService) {}
    this.data = this.ApiCallService.APICall('https://api.propublica.org/congress/v1/115/'+ chamber +'/members',[{'Content-Type': 'application/json'},{'X-API-Key': 'eSWFmfOycw0k6OHWydfe3a1AcTKkF1UO2o3DgZig'}])
    //subscribe takes the response and feeds it into a callback function
    .subscribe((response: Response) => {
+   console.log(response);
    //converts the response to JSON
+
    let result = response.json();
    //the part that holds the data for each member of congress
    var congress = result.results[0].members;
@@ -42,9 +43,9 @@ constructor(private ApiCallService: ApiCallService) {}
          missed_votes_pct: congress[i].missed_votes_pct,
          state: congress[i].state,
          leadership_role: congress[i].leadership_role,
-         district: congress[i].district
-       }
-       );
+         district: congress[i].district,
+         chamber: this.getChamber(congress[i].district)
+       });
 
    }
 
@@ -62,6 +63,12 @@ if (letter == "D"){
 }
 
 }
-
+getChamber(district){
+  if(district != null){
+    return "House";
+  }else{
+    return "Senate";
+  }
+}
 
 }
